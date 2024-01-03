@@ -59,7 +59,7 @@ app.delete("/delete/:id", (req, res) => {
 
 // mongoose.connect("mongodb://127.0.0.1:27017/test");
 mongoose.connect(
-  "mongodb+srv://ajmal:ajmal123@cluster0.lkshd4d.mongodb.net/test?retryWrites=true&w=majority"
+  "mongodb+srv://user:user123@cluster0.lkshd4d.mongodb.net/test?retryWrites=true&w=majority"
 );
 
 app.get("", (req, res) => {
