@@ -1,0 +1,55 @@
+.formSubmit {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+.formSubmit input {
+  padding: 8px;
+  border-radius: 8px;
+}
+.formSubmit button {
+  background-color: rgb(234, 230, 230);
+  padding: 5px;
+  border-radius: 4px;
+}
+.formSubmit button:hover {
+  padding: 7px;
+  border-radius: 4px;
+  background-color: rgb(216, 215, 215);
+  cursor: pointer;
+}
+
+.tableData {
+  width: 100%;
+}
+.tableDat th,
+td {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+.readDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+.readDiv button {
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: darkcyan;
+}
+.readDiv button:hover {
+  cursor: pointer;
+  color: rgb(50, 49, 49);
+}
+
+.deletebtn{
+    background-color:red ;  
+}
