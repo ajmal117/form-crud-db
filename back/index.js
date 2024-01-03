@@ -57,7 +57,8 @@ app.delete("/delete/:id", (req, res) => {
     });
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/test");
+// mongoose.connect("mongodb://127.0.0.1:27017/test");
+mongoose.connect("mongodb+srv://ajmal117:Tiger@01@cluster0.hhh01ii.mongodb.net/?retryWrites=true&w=majority/test");
 
 app.get("", (req, res) => {
   res.send("data from backend");
