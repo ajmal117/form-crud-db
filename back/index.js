@@ -5,7 +5,13 @@ const mongoose = require("mongoose");
 const UserModel = require("./models/userdata");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://form-crud-db.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 let port = 8000;
