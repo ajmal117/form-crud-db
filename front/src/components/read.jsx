@@ -11,7 +11,7 @@ function Read() {
   useEffect(() => {
     // setCount(count + 1);
     axios
-      .get("http://localhost:8000/get")
+      .get("https://form-crud-db.vercel.app/get")
       .then((res) => {
         setReadData(res.data);
       })

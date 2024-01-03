@@ -23,7 +23,8 @@ function Create() {
     e.preventDefault();
     setCount(count+1)
     axios
-      .post("http://localhost:8000/add", {
+      // .post("http://localhost:8000/add", {
+      .post("https://form-crud-db.vercel.app/add", {
         data: data,
       })
       .then((result) => history(`/read`))

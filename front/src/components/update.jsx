@@ -14,7 +14,7 @@ function Update() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/get")
+      .get("https://form-crud-db.vercel.app/get")
       .then((res) => {
         setUsername(res.data.find((item) => (item._id = id)).username);
         setEmail(res.data.find((item) => (item._id = id)).email);
@@ -31,7 +31,7 @@ function Update() {
 
   const handleSubmit = () => {
     axios
-      .put(`http://localhost:8000/put/${id}`, {
+      .put(`https://form-crud-db.vercel.app/put/${id}`, {
         data: {
           username: username,
           email: email,
