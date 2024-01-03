@@ -24,7 +24,7 @@ function Read() {
   const handleDelete = (id) => {
     // console.log(id);
     axios
-      .delete("http://localhost:8000/delete/" + id)
+      .delete("https://form-crud-db.vercel.app/delete/" + id)
       .then((res) => window.location.reload())
       .catch((err) => {
         console.log(err);
