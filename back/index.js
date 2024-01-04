@@ -8,7 +8,7 @@ const app = express();
 app.use(
   cors({
     origin: ["https://form-crud-db-front.vercel.app"],
-    methods: ["POST", "GET", "PUT", "DELETE", "CONNECT"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
 );
