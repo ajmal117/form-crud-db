@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./styles.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Create() {
   const history = useNavigate();
+
   const [count, setCount] = useState(0);
   const initialValue = {
     username: "",
@@ -31,6 +33,21 @@ function Create() {
       .catch((err) => {
         console.log(err);
       });
+    // alert("Data added in the Database");
+    Swal.fire({
+      title: "Do you want to add your data?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire("Saved!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Changes are not saved", "", "info");
+      }
+    });
   };
   console.log(count);
   return (

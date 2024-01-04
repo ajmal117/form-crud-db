@@ -2,6 +2,7 @@ import axios from "axios";
 import "./styles.css";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Update() {
   const { id } = useParams();
@@ -40,16 +41,17 @@ function Update() {
         },
       })
       .then((result) => {
-        // history("/read"); //not working
-        // setTimeout(() => {
-        //   window.location.assign("/read");
-        // }, 2000); //not working
+        // history(`/read`);
         window.location.assign("/read");
       })
       .catch((err) => {
         console.log(err);
       });
-    alert("data update");
+
+    Swal.fire({
+      title: "Data is Updated",
+      icon: "success",
+    });
   };
   return (
     <div>
