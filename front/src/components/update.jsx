@@ -40,7 +40,9 @@ function Update() {
       })
       .then((result) => {
         // history("/read");
-        window.location.assign("./read");
+        setTimeout(() => {
+          window.location.assign("/read");
+        }, 2000);
       })
       .catch((err) => {
         console.log(err);
