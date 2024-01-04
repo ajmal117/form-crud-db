@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Update() {
   const { id } = useParams();
@@ -79,6 +79,11 @@ function Update() {
         <button type="submit" className="buttonSubmit">
           Update Data
         </button>
+        <Link to="/read">
+          <button type="submit" className="buttonRead">
+            Read Data
+          </button>
+        </Link>
       </form>
     </div>
   );

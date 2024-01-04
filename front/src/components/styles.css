@@ -50,6 +50,10 @@ td {
   color: rgb(50, 49, 49);
 }
 
-.deletebtn{
-    background-color:red ;  
+.deletebtn {
+  background-color: red;
+}
+.buttonRead {
+  background-color: rgb(238, 111, 111);
+  color: black;
 }
