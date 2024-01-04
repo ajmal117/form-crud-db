@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Create() {
   const history = useNavigate();
@@ -21,7 +21,7 @@ function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCount(count+1)
+    setCount(count + 1);
     axios
       // .post("http://localhost:8000/add", {
       .post("https://form-crud-db.vercel.app/add", {
@@ -59,6 +59,11 @@ function Create() {
         <button type="submit" className="buttonSubmit">
           Submit Data
         </button>
+        <Link to="/read">
+          <button type="submit" className="buttonRead">
+            Read Data
+          </button>
+        </Link>
       </form>
     </div>
   );
