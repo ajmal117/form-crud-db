@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {  useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 
 function Update() {
+  const history = useNavigate()
   const { id } = useParams();
   // const history = useNavigate();
 
@@ -39,8 +40,8 @@ function Update() {
         },
       })
       .then((result) => {
-        // history("/read");
-        window.location.assign("/read");
+        history("/read");
+        // window.location.assign("/read");
       })
       .catch((err) => {
         console.log(err);
