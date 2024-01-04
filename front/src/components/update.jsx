@@ -39,10 +39,12 @@ function Update() {
         },
       })
       .then((result) => {
-        // history("/read");
-        setTimeout(() => {
-          window.location.assign("/read");
-        }, 2000);
+        // history("/read"); //not working
+        // setTimeout(() => {
+        //   window.location.assign("/read");
+        // }, 2000); //not working
+        alert("data update");
+        window.location.assign("/read");
       })
       .catch((err) => {
         console.log(err);
