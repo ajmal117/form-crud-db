@@ -25,7 +25,8 @@ function Read() {
     // console.log(id);
     axios
       .delete("https://form-crud-db.vercel.app/delete/" + id)
-      .then((res) => window.location.reload())
+      // .then((res) => window.location.reload())
+      .then((res) => history(`/read`))
       .catch((err) => {
         console.log(err);
       });

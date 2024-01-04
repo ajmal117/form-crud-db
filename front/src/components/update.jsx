@@ -42,7 +42,7 @@ function Update() {
       })
       .then((result) => {
         // history(`/read`);
-        window.location.assign("/read");
+        // window.location.assign("/read");
       })
       .catch((err) => {
         console.log(err);
